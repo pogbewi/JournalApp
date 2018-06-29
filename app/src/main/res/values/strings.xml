@@ -1,0 +1,64 @@
+<resources>
+    <!--
+     Copyright (C) 2018 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+      - This file contains all of the strings used throughout Journal They can be accessed       -
+      - through calls to Context#getString. This strings are organized by where they are used in   -
+      - Sunshine.                                                                                  -
+      -                                                                                            -
+      - Throughout this file, you will see <xliff:g> tags. These help any potential translators    -
+      - properly translate your strings and also give developers that are looking at your strings  -
+      - an idea of exactly how they are used.                                                      -
+      - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+    <string name="app_name">JournalApp</string>
+
+    <string name="main_activity_name">All Diary</string>
+    <string name="add_diary_activity_name">Add a New Diary</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="action_about">About</string>
+    <string name="action_share">Share</string>
+    <string name="action_search">Search</string>
+
+    <string name="pref_emoji">Enable Emoji</string>
+    <string name="pref_reminder">Reminder</string>
+
+    <string name="item_date">Date Posted</string>
+    <string name="item_title">Diary Item Title</string>
+    <string name="item_description">Body of Diary Item</string>
+    <string name="item_delete">Delete</string>
+    <string name="save_changes">Save Changes ?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="cancel">Cancle</string>
+
+    <string name="user_sign_in">Sign In</string>
+    <string name="user_sign_in_existing_account">Sign In To Existing Account</string>
+    <string name="user_sign_up">Sign Up</string>
+    <string name="user_account">Account</string>
+    <string name="user_email">Your Email as Username</string>
+    <string name="user_password">Your Password</string>
+    <string name="user_no_account">No account yet? Create One Now</string>
+    <string name="user_fullname">full Name</string>
+    <string name="user_confirm_password">Confirm Password</string>
+
+
+</resources>
