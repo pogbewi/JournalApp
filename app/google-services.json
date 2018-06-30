@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "807833237661",
+    "firebase_url": "https://journal-app-alc-precious.firebaseio.com",
+    "project_id": "journal-app-alc-precious",
+    "storage_bucket": "journal-app-alc-precious.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:807833237661:android:a6031bfb85f41adc",
+        "android_client_info": {
+          "package_name": "com.savysoft.esther.journalapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "807833237661-q8fdrn2eom0bem5hqdf5bth7k9rp5g7u.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCNqgPOdxN0G5ok3bq8RuCMavMuVmiq4yw"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

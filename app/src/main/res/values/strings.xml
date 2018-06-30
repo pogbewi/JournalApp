@@ -29,6 +29,8 @@
 
     <string name="main_activity_name">All Diary</string>
     <string name="add_diary_activity_name">Add a New Diary</string>
+    <string name="signup_activity_name">Create Account</string>
+    <string name="signin_activity_name">Sign In</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
@@ -59,6 +61,8 @@
     <string name="user_no_account">No account yet? Create One Now</string>
     <string name="user_fullname">full Name</string>
     <string name="user_confirm_password">Confirm Password</string>
-
+    <string name="user_reset_password">Forgot Password ?</string>
+    <string name="reset_password">Reset Password ?</string>
+    <string name="btn_back">Back</string>
 
 </resources>
