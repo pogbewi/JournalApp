@@ -123,7 +123,7 @@ public class LoginActivity extends AppCompatActivity {
                     if(task.isSuccessful()){
                         Log.d(TAG, "Login successfull");
                         //Launch the Login Activity
-                        Intent i = new Intent(LoginActivity.this, LoginActivity.class);
+                        Intent i = new Intent(LoginActivity.this, MainActivity.class);
                         startActivity(i);
                         setResult(RESULT_OK, null);
                         finish();
@@ -131,10 +131,12 @@ public class LoginActivity extends AppCompatActivity {
                         Log.d(TAG, "Action Cancelled");
                         Toast.makeText(LoginActivity.this, "Login Cancelled" + task.getException(),
                                 Toast.LENGTH_SHORT).show();
+                        mLogin.setEnabled(true);
                     }else if(!task.isSuccessful()){
                         Log.d(TAG, "Auth Failed");
                         Toast.makeText(LoginActivity.this, "Authentication failed." + task.getException(),
                                 Toast.LENGTH_SHORT).show();
+                        mLogin.setEnabled(true);
                     }
                 }
             });
@@ -148,22 +150,21 @@ public class LoginActivity extends AppCompatActivity {
     private void passwordReset() {
         //Alert Dialog for Diasplaying password reset form
         final AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(this);
-        LayoutInflater inflater = getLayoutInflater();
+        LayoutInflater inflater = LayoutInflater.from(this);
         final View dialogView = inflater.inflate(R.layout.activity_reset_password, null);
         dialogBuilder.setView(dialogView);
 
         //init views
-        EditText resetPasswordView = findViewById(R.id.user_reset_email);
-        Button resetBtn = findViewById(R.id.btn_reset_password);
-        Button btnBack = findViewById(R.id.btn_back);
-        final String resetPassword = resetPasswordView.getText().toString().trim();
-
+        EditText resetPasswordView = dialogView.findViewById(R.id.user_reset_email);
+        Button resetBtn = dialogView.findViewById(R.id.btn_reset_password);
+        Button btnBack = dialogView.findViewById(R.id.btn_back);
+        final String resetEmail = resetPasswordView.getText().toString().trim();
         final AlertDialog dialog = dialogBuilder.create();
        resetBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 //handle Password Reset
-                mFirebaseAuth.sendPasswordResetEmail(resetPassword).addOnCompleteListener(new OnCompleteListener<Void>() {
+                mFirebaseAuth.sendPasswordResetEmail(resetEmail).addOnCompleteListener(new OnCompleteListener<Void>() {
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {
                         if (task.isSuccessful()) {
@@ -171,7 +172,7 @@ public class LoginActivity extends AppCompatActivity {
                         } else {
                             Toast.makeText(LoginActivity.this, "Failed to send reset email!", Toast.LENGTH_SHORT).show();
                         }
-                        dialog.dismiss();
+                       dialog.cancel();
                     }
                 });
             }
